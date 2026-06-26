@@ -120,7 +120,7 @@ revealEls.forEach(el => revealObserver.observe(el));
       ctx.rotate(p.rotation);
       ctx.globalAlpha = Math.max(0, alpha);
       ctx.fillStyle = '#522d80';
-      ctx.font = `${p.size}px 'Playfair Display', serif`;
+      ctx.font = `${p.size}px 'EB Garamond', serif`;
       ctx.textAlign = 'center';
       ctx.textBaseline = 'middle';
       ctx.fillText(p.symbol, 0, 0);

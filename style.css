@@ -22,8 +22,8 @@
   --text-2:    #475569;
   --text-3:    #64748b;
 
-  --font-sans: 'Outfit', system-ui, sans-serif;
-  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-serif: 'EB Garamond', Georgia, serif;
   --font-mono: 'JetBrains Mono', monospace;
 
   --radius-sm: 8px;
