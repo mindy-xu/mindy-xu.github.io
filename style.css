@@ -4,34 +4,34 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --bg:         #ffffff;
-  --bg-2:       #f8fafc;
-  --bg-3:       #f1f5f9;
-  --surface:    #ffffff;
-  --surface-hov: #f8fafc;
-  --border:     rgba(15, 23, 42, 0.08);
-  --border-hov: rgba(15, 23, 42, 0.2);
+  --bg:         #050508;
+  --bg-2:       #0a0a0f;
+  --bg-3:       #111118;
+  --surface:    rgba(255, 255, 255, 0.03);
+  --surface-hov: rgba(255, 255, 255, 0.06);
+  --border:     rgba(255, 255, 255, 0.08);
+  --border-hov: rgba(255, 255, 255, 0.15);
 
-  --accent:     #522d80;
-  --accent-dim: rgba(82, 45, 128, 0.06);
-  --accent-glow: rgba(82, 45, 128, 0.15);
-  --gold:       #f56600;
-  --gold-dim:   rgba(245, 102, 0, 0.1);
+  --accent:     #a78bfa;
+  --accent-dim: rgba(167, 139, 250, 0.1);
+  --accent-glow: rgba(167, 139, 250, 0.25);
+  --gold:       #fbbf24;
+  --gold-dim:   rgba(251, 191, 36, 0.1);
 
-  --text-1:    #0f172a;
-  --text-2:    #475569;
-  --text-3:    #64748b;
+  --text-1:    #ffffff;
+  --text-2:    #a1a1aa;
+  --text-3:    #71717a;
 
-  --font-sans: 'Inter', system-ui, sans-serif;
-  --font-serif: 'EB Garamond', Georgia, serif;
+  --font-sans: 'Outfit', system-ui, sans-serif;
+  --font-serif: 'Playfair Display', Georgia, serif;
   --font-mono: 'JetBrains Mono', monospace;
 
   --radius-sm: 8px;
-  --radius-md: 14px;
-  --radius-lg: 22px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
 
-  --transition: 0.25s cubic-bezier(0.4,0,0.2,1);
-  --transition-slow: 0.5s cubic-bezier(0.4,0,0.2,1);
+  --transition: 0.3s cubic-bezier(0.4,0,0.2,1);
+  --transition-slow: 0.6s cubic-bezier(0.4,0,0.2,1);
 }
 
 html { scroll-behavior: smooth; }
@@ -193,7 +193,7 @@ img { display: block; max-width: 100%; }
   padding: 0 48px;
 }
 #navbar.scrolled {
-  background: rgba(255,255,255,0.9);
+  background: rgba(5, 5, 8, 0.75);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border-bottom: 1px solid var(--border);
@@ -248,7 +248,7 @@ img { display: block; max-width: 100%; }
 .hamburger span {
   display: block;
   width: 22px; height: 2px;
-  background: var(--text-2);
+  background: var(--text-1);
   border-radius: 2px;
   transition: var(--transition);
 }
@@ -258,7 +258,7 @@ img { display: block; max-width: 100%; }
   display: none;
   position: fixed;
   top: 68px; left: 0; right: 0;
-  background: rgba(255,255,255,0.98);
+  background: rgba(5, 5, 8, 0.95);
   backdrop-filter: blur(20px);
   z-index: 99;
   flex-direction: column;
@@ -312,9 +312,10 @@ img { display: block; max-width: 100%; }
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse 80% 70% at 50% -10%, rgba(99,182,255,0.1), transparent),
-    radial-gradient(ellipse 60% 80% at -10% 80%, rgba(99,182,255,0.06), transparent),
-    linear-gradient(to bottom, rgba(7,9,15,0.3) 0%, rgba(7,9,15,0.85) 100%);
+    radial-gradient(ellipse 80% 80% at 50% -20%, rgba(167, 139, 250, 0.15), transparent),
+    radial-gradient(ellipse 60% 80% at -10% 80%, rgba(251, 191, 36, 0.08), transparent),
+    radial-gradient(ellipse 60% 80% at 110% 80%, rgba(167, 139, 250, 0.08), transparent),
+    linear-gradient(to bottom, rgba(5,5,8,0.4) 0%, var(--bg) 100%);
   z-index: 1;
 }
 
@@ -446,7 +447,7 @@ img { display: block; max-width: 100%; }
   border-radius: var(--radius-lg);
   overflow: hidden;
   border: 1px solid var(--border);
-  background: var(--bg-3);
+  background: transparent;
   position: relative;
 }
 .about-photo-placeholder {
@@ -466,6 +467,8 @@ img { display: block; max-width: 100%; }
 
 .about-card {
   background: var(--surface);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
   padding: 20px;
@@ -560,6 +563,8 @@ img { display: block; max-width: 100%; }
 
 .research-card {
   background: var(--surface);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   padding: 36px 32px;
@@ -740,6 +745,8 @@ img { display: block; max-width: 100%; }
 
 .teaching-semester {
   background: var(--surface);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   overflow: hidden;
@@ -807,6 +814,8 @@ img { display: block; max-width: 100%; }
 
 .contact-card {
   background: var(--surface);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   padding: 36px 28px;
